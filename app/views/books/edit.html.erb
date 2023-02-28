@@ -17,16 +17,20 @@
 
 <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
 
-  <p>Title</p>
-  <%= f.text_field :title %>
+  <div>
+    Title</br>
+    <%= f.text_field :title %>
+  </div>
 
-  <p>Body</p>
-  <%= f.text_area :body %>
+  <div>
+    Body</br>
+    <%= f.text_area :body %>
+  </div>
 
-  </br>
-  <%= f.submit 'Update Book' %>
-  </br>
+  <div>
+    <%= f.submit 'Update Book' %>
+  </div>
 
-  <%= link_to 'Show', book_path(@book.id) %>|<%= link_to 'Back', '/books' %>
+  <%= link_to 'Show', book_path(@book.id) %> | <%= link_to 'Back', '/books' %>
 
 <% end %>
